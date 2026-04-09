@@ -1,9 +1,9 @@
 // MENU RESPONSIVO
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
 
-menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
 });
 
 // SCROLL SUAVE
@@ -13,13 +13,21 @@ function scrollToSection(id) {
     });
 }
 
-// FORMULÁRIO
-const form = document.getElementById("formContato");
-const mensagem = document.getElementById("mensagem");
+// SISTEMA DE BUSCA
+function buscar() {
+    const termo = document.getElementById("searchInput").value.toLowerCase();
+    const resultado = document.getElementById("resultado");
 
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    mensagem.textContent = "Mensagem enviada com sucesso!";
-    mensagem.style.color = "green";
-    form.reset();
-});
+    const dados = {
+        "agricultura familiar": "Base da produção alimentar sustentável.",
+        "agroecologia": "Modelo agrícola sustentável e ecológico.",
+        "produção orgânica": "Alimentos sem uso de agrotóxicos.",
+        "sustentabilidade": "Equilíbrio entre produção e meio ambiente."
+    };
+
+    if (dados[termo]) {
+        resultado.innerHTML = `<p>${dados[termo]}</p>`;
+    } else {
+        resultado.innerHTML = "<p>Resultado não encontrado.</p>";
+    }
+}
