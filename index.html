@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agroforte - Futuro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Agro<span>Forte</span></h1>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#praticas">Práticas</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Futuro Sustentável no Campo</h2>
+            <p>Equilíbrio entre produção agrícola e preservação ambiental.</p>
+            <button onclick="scrollToSection('sobre')">Saiba Mais</button>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="section">
+        <h2>Sobre o Agroforte</h2>
+        <p>
+            O Agroforte promove práticas agrícolas sustentáveis, integrando tecnologia,
+            inovação e responsabilidade ambiental para garantir produtividade sem comprometer o futuro.
+        </p>
+    </section>
+
+    <!-- PRÁTICAS -->
+    <section id="praticas" class="section cards">
+        <h2>Práticas Sustentáveis</h2>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>🌱 Agricultura Sustentável</h3>
+                <p>Uso consciente dos recursos naturais com foco na preservação do solo e da água.</p>
+            </div>
+
+            <div class="card">
+                <h3>💧 Gestão da Água</h3>
+                <p>Sistemas inteligentes de irrigação e reaproveitamento hídrico.</p>
+            </div>
+
+            <div class="card">
+                <h3>🌳 Reflorestamento</h3>
+                <p>Recuperação de áreas degradadas e proteção da biodiversidade.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section contato">
+        <h2>Contato</h2>
+        <form id="formContato">
+            <input type="text" placeholder="Seu nome" required>
+            <input type="email" placeholder="Seu e-mail" required>
+            <textarea placeholder="Sua mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="mensagem"></p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Agroforte - Sustentabilidade no campo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
